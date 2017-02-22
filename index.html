@@ -22,38 +22,50 @@
           </ul>
         </nav>
 
-    </header>
+    </header><!-- END OF HEADER -->
 
-    <main role="main">
+    <main role="main" class="main">
 
         <article role="article" class="about" id="about">
-          <header><h1>about jzlp</h1></header>
-        </article>
+          <header class="about__header"><h1 class="about__heading">about jzlp</h1></header>
+        </article><!-- END OF ABOUT -->
 
         <article role="article" class="team" id="team">
-          <header><h1>meet our team</h1></header>
+          <header class="team__header"><h1 class="team__heading">meet our team</h1></header>
 
           <section class="profile">
-              <figure>
-                <img src="public/assets/images/avatar-joey.jpg" alt="joey's avatar">
-                <figcaption>Joey</figcaption>
-                <p>"Hi, I'm Joey and I'm great with JavaScript!"</p>
+              <figure class="profile__card">
+                <img class="profile__avatar" src="public/assets/images/avatar-joey.jpg" alt="joey's avatar">
+                <figcaption class="profile__name">Joey</figcaption>
+                <p class="profile__bio">"Hi, I'm Joey and I'm great with JavaScript!"</p>
               </figure>
               <section class="social">
                 <div class="social__icon">l</div>
                 <div class="social__icon">g</div>
                 <div class="social__icon">c</div>
               </section>
-          </section>
+          </section><!-- END OF PROFILE 1 -->
 
 
-        </article>
+        </article><!-- END OF TEAM -->
 
-        <form role="form" class="form" action="index.html" method="post" id="contact">
-          <header> <h1>form</h1></header>
+        <section class="contact" id="contact">
+          <header class="contact__header"><h1 class="contact__heading">Contact</h1></header>
 
-          form
-        </form>
+          <form
+            role="form"
+            class="form"
+            action="index.html"
+            method="post"
+          >
+            <label class="form__label--name" for="formName">Name</label>
+            <input class="form__input--name" type="text" id="" name="given-name" placeholder="Enter first name" required autocomplete="given-name" />
+
+            <label class="form__label--email" for="formEmail">Email</label>
+            <input class="form__input--email" type="text" id="formEmail" name="email" placeholder="Enter your email" required autocomplete="email" />
+
+          </form>
+        </section><!-- END OF CONTACT -->
 
 
     </main>
