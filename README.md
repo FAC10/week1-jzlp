@@ -42,10 +42,14 @@
 
 
 ### Stretch goals
-* ~~expand "team" member sections on hover~~
-* smooth scroll (pref css only, with js if needed)
-* improve security of form submission
-* make each section fill screen :heavy_check_mark:
+[x] optimise file size of images
+  1. Reduce file size of profile images (11MB -> 70K) by resizing and optimising.
+  1. Save images as progressive JPEG rather than baseline. Baseline images are images that load from top to bottom, line by line. Progressive images load in layers, starting with a blurry image, then finishing with a high-resolution layer.
+
+[] ~~expand "team" member sections on hover~~
+[] smooth jump to section (can it be done with css? go with js if needed)
+[] improve security of form submission
+[x] make each section fill screen
 
 ### User stories
 ### Build a one-page portfolio website for you and your team
