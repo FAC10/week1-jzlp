@@ -42,7 +42,7 @@
 
 
 ### Stretch goals
-* expand "team" member sections on hover
+* ~~expand "team" member sections on hover~~
 * smooth scroll (pref css only, with js if needed)
 * improve security of form submission
 * make each section fill screen :heavy_check_mark:
