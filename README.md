@@ -57,9 +57,9 @@
    - [Progressive jpegs: a new best practice](https://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
    - [The return of the progressive JPEG](https://www.wired.com/2013/01/the-return-of-the-progressive-jpeg/)
 
-- [] ~~expand "team" member sections on hover~~
-- [] smooth jump to section (can it be done with css? go with js if needed)
-- [] improve security of form submission
+- [ ] ~~expand "team" member sections on hover~~
+- [ ] smooth jump to section (can it be done with css? go with js if needed)
+- [ ] improve security of form submission
 - [x] make each section fill screen
 
 ### User stories
