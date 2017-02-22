@@ -58,6 +58,8 @@
    - [The return of the progressive JPEG](https://www.wired.com/2013/01/the-return-of-the-progressive-jpeg/)
 
 - [ ] ~~expand "team" member sections on hover~~
+  <img src="demo/expand-on-hover.gif" width="560" height="auto"/>
+
 - [ ] smooth jump to section (can it be done with css? go with js if needed)
 - [ ] improve security of form submission
 - [x] make each section fill screen
