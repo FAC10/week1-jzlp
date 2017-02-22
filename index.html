@@ -89,28 +89,54 @@
     </article><!-- END OF TEAM -->
 
     <section class="contact" id="contact">
-      <header class="contact__header"><h1 class="contact__heading">Contact</h1></header>
+
+      <header class="contact__header">
+        <h1 class="contact__heading">Contact</h1>
+      </header>
+
       <form
         role="form"
         class="form"
-        action="index.html"
+        action="https://formspree.io/lucyrose@protonmail.com"
         method="post"
       >
         <label class="form__label--name" for="formName">Name</label>
-        <input class="form__input--name" type="text" id="form" name="name" placeholder="Enter name" required autocomplete="name" />
+        <input
+          class="form__input--name"
+          id="formName" name="name"
+          placeholder="Enter name"
+          required
+          autocomplete="name"
+        />
 
         <label class="form__label--email" for="formEmail">Email</label>
-        <input class="form__input--email" type="text" id="formEmail" name="email" placeholder="Enter email" required autocomplete="email" />
+        <input
+          class="form__input--email"
+          type="text"
+          id="formEmail"
+          name="_replyto"
+          placeholder="Enter email"
+          required
+          autocomplete="email"
+        />
 
         <label class="form__label--message" for="formMessage">Message</label>
-        <input class="form__input--message" type="text" id="form" name="email" placeholder="Enter message" required />
+        <textarea
+          class="form__input--message"
+          id="formMessage"
+          name="message"
+          placeholder="Enter message"
+          required>
+        </textarea>
+
+        <button class="form__btn" type="submit" name="button">Submit</button>
       </form>
     </section><!-- END OF CONTACT -->
 
   </main><!-- END OF MAIN -->
 
   <footer role="contentinfo" class="page-footer">
-    <p class="page-footer__text">Made with love by jzlp</p>
+    <p class="page-footer__text">< > with ❤️️ by jzlp</p>
   </footer>
 
   <script src="public/assets/js/script.js"></script>
