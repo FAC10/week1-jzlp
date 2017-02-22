@@ -4,7 +4,7 @@
   "description": "jzlp team page ",
   "main": "index.html",
   "scripts": {
-    "dev": "browser-sync start --server --files 'public/*.css'"
+    "dev": "browser-sync start --server --files 'public/**/*.css, public/**/*.js, *.html' --no-notify"
   },
   "repository": {
     "type": "git",
