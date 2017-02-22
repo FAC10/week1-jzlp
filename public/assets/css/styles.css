@@ -1,3 +1,46 @@
+* {
+  margin: 0;
+}
+
 body {
   color: black;
 }
+
+article {
+  height: 100vh;
+}
+
+footer {
+  display: fixed;
+  /*bottom: 0;*/
+}
+
+.team__header {
+  height: 10vh;
+}
+
+#about {
+  background-color: green;
+}
+
+#team {
+  background-color: orange;
+  height: 410vh;
+}
+
+#contact {
+  background-color: blue;
+  height: 100vh;
+}
+
+.nav_link {
+  display: inline;
+}
+
+.profile {
+  height: 100vh;
+  margin: 0;
+}
+
+
+/* In media query .team__header height:10vh;, .profile height:90vh;*/
