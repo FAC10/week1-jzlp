@@ -42,14 +42,25 @@
 
 
 ### Stretch goals
-[x] optimise file size of images
-  1. Reduce file size of profile images (11MB -> 70K) by resizing and optimising.
-  1. Save images as progressive JPEG rather than baseline. Baseline images are images that load from top to bottom, line by line. Progressive images load in layers, starting with a blurry image, then finishing with a high-resolution layer.
+- [x] optimise rendering of images
+  1. Reduced file size of profile images (11MB -> 70K) by resizing and optimising.
+  1. Saved JPEGs as **progressive images rather than baseline images**. Baseline images are the "normal" JPEGs, the type of JPEG that all image programs write by default. The browsers load them top-to-bottom as more of the image information is being downloaded. Progressive JPEGs are another type of JPEGs, they are rendered progressively. First you see a low quality version of the whole image. Then, as more of the image information arrives over the network, the quality gradually improves.
+  <img src="demo/baseline_vs_progressive_image.jpg" width="560" height="auto"/>
 
-[] ~~expand "team" member sections on hover~~
-[] smooth jump to section (can it be done with css? go with js if needed)
-[] improve security of form submission
-[x] make each section fill screen
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/oItMsmZ995I" frameborder="0" allowfullscreen></iframe>
+  Resources:
+   - [GIMP - How to save in progressive / baseline mode - Youtube](https://www.youtube.com/watch?v=SadyOSO3D8w)
+   - [Photoshop - How to save in progressive / baseline](http://peteschuster.com/2013/01/saving-jpegs-for-the-web-setting-photoshop-up-for-progressive-jpegs/)
+   - [Progressive vs Baseling Demo Image - Youtube](https://www.youtube.com/watch?v=TOc15-2apY0)
+   - [Progressive vs Baseling Demo Page - Youtube](https://www.youtube.com/watch?v=oItMsmZ995I)
+   - [Book of Speed - Chapter 5 - Stoyan Stefanov](http://www.bookofspeed.com/chapter5.html)
+   - [Progressive jpegs: a new best practice](https://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
+   - [The return of the progressive JPEG](https://www.wired.com/2013/01/the-return-of-the-progressive-jpeg/)
+
+- [] ~~expand "team" member sections on hover~~
+- [] smooth jump to section (can it be done with css? go with js if needed)
+- [] improve security of form submission
+- [x] make each section fill screen
 
 ### User stories
 ### Build a one-page portfolio website for you and your team
