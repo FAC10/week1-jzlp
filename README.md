@@ -14,10 +14,10 @@
   in
 
 
-### process
+### Process
 1. discussion day 1
   * set up github repo and gitter channel
-  * group wireframe of webapp
+  * group wireframe of web app
   * decided to go mobile first in terms of design
   * ran through user stories to check that our plan fitted these
     * decided to use formspree.io for form
@@ -28,11 +28,13 @@
       * make sure all is tabbable
     * do we need any javascript?
       * hopefully not
-  * Day one target: have a basic webapp with placeholders by the end of today
+  * Day one target: have a basic web app with placeholders by the end of today
 
 
-### tasks
+### Tasks
 - [x] html structure assigned to Piotr and Lucy
+  <img src="demo/pure-html-render.png" width="400" height="auto"/>
+
 - [x] work out host on github pages
 - [x] inital design (enhanced wireframe) assigned to Joey and Zooey
 
