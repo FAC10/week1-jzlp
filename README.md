@@ -31,14 +31,10 @@
   * Day one target: have a basic webapp with placeholders by the end of today
 
 
-
-
-
 ### tasks
-* html structure assigned to Piotr and Lucy
-* work out host on github pages :heavy_check_mark:
-* inital design (enhanced wirefram) assigned to Joey and Zooey
-
+- [x] html structure assigned to Piotr and Lucy
+- [x] work out host on github pages
+- [x] inital design (enhanced wireframe) assigned to Joey and Zooey
 
 
 ### Stretch goals
@@ -47,13 +43,12 @@
   1. Saved JPEGs as **progressive images rather than baseline images**. Baseline images are the "normal" JPEGs, the type of JPEG that all image programs write by default. The browsers load them top-to-bottom as more of the image information is being downloaded. Progressive JPEGs are another type of JPEGs, they are rendered progressively. First you see a low quality version of the whole image. Then, as more of the image information arrives over the network, the quality gradually improves.
   <img src="demo/baseline_vs_progressive_image.jpg" width="560" height="auto"/>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/oItMsmZ995I" frameborder="0" allowfullscreen></iframe>
   Resources:
    - [GIMP - How to save in progressive / baseline mode - Youtube](https://www.youtube.com/watch?v=SadyOSO3D8w)
-   - [Photoshop - How to save in progressive / baseline](http://peteschuster.com/2013/01/saving-jpegs-for-the-web-setting-photoshop-up-for-progressive-jpegs/)
-   - [Progressive vs Baseling Demo Image - Youtube](https://www.youtube.com/watch?v=TOc15-2apY0)
-   - [Progressive vs Baseling Demo Page - Youtube](https://www.youtube.com/watch?v=oItMsmZ995I)
-   - [Book of Speed - Chapter 5 - Stoyan Stefanov](http://www.bookofspeed.com/chapter5.html)
+   - [Photoshop - How to save in progressive / baseline mode](http://peteschuster.com/2013/01/saving-jpegs-for-the-web-setting-photoshop-up-for-progressive-jpegs/)
+   - [Progressive vs Baseling - Demo Image - Youtube](https://www.youtube.com/watch?v=TOc15-2apY0)
+   - [Progressive vs Baseling - Demo Page - Youtube](https://www.youtube.com/watch?v=oItMsmZ995I)
+   - [Book of Speed - Chapter 5 Optimizing Images - Stoyan Stefanov](http://www.bookofspeed.com/chapter5.html)
    - [Progressive jpegs: a new best practice](https://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
    - [The return of the progressive JPEG](https://www.wired.com/2013/01/the-return-of-the-progressive-jpeg/)
 
