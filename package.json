@@ -1,0 +1,22 @@
+{
+  "name": "week1-jzlp",
+  "version": "1.0.0",
+  "description": "jzlp team page ",
+  "main": "index.html",
+  "scripts": {
+    "dev": "browser-sync start --server --files 'public/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC10/week1-jzlp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FAC10/week1-jzlp/issues"
+  },
+  "homepage": "https://github.com/FAC10/week1-jzlp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}
