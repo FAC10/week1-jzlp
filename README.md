@@ -33,6 +33,7 @@
 
 ### Tasks
 - [x] html structure assigned to Piotr and Lucy
+
   <img src="demo/pure-html-render.png" width="400" height="auto"/>
 
 - [x] work out host on github pages
