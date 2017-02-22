@@ -36,7 +36,8 @@
 
 ### tasks
 * html structure assigned to Piotr and Lucy
-* ~~work out host on github pages~~
+* work out host on github pages :heavy_check_mark:
+* inital design (enhanced wirefram) assigned to Joey and Zooey
 
 
 
@@ -44,7 +45,7 @@
 * expand "team" member sections on hover
 * smooth scroll (pref css only, with js if needed)
 * improve security of form submission
-* make each section fill screen
+* make each section fill screen :heavy_check_mark:
 
 ### User stories
 ### Build a one-page portfolio website for you and your team
