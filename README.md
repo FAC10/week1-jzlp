@@ -41,7 +41,7 @@
 
 
 ### Stretch goals
-- [x] convert profile photos to cartoon
+- [x] convert profile photos to cartoon using [BeFunky Online Photo Editor](https://www.befunky.com/)
 - [x] optimise rendering of images
   1. Reduced file size of profile images (11MB -> 70K) by resizing and optimising.
   1. Saved JPEGs as **progressive images rather than baseline images**. Baseline images are the "normal" JPEGs, the type of JPEG that all image programs write by default. The browsers load them top-to-bottom as more of the image information is being downloaded. Progressive JPEGs are another type of JPEGs, they are rendered progressively. First you see a low quality version of the whole image. Then, as more of the image information arrives over the network, the quality gradually improves.
