@@ -1,12 +1,17 @@
+// Modify nav anchor links to avoid href attribute
+// taking precendence over javascript smoothScrollTo function
+document.querySelector('.nav__list').innerHTML = `
+  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;">about</a></li>
+  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;">team</a></li>
+  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;">contact</a></li>
+`;
 
 
 // Find elements in DOM
-var linksDOM = document.querySelectorAll('.nav__link');
+var linksDOM = document.querySelectorAll('.js-nav-link');
 var aboutDOM = document.getElementById('about');
 var teamDOM = document.getElementById('team');
 var contactDOM = document.getElementById('contact');
-
-
 
 
 // Add event listeners
@@ -14,36 +19,20 @@ linksDOM.forEach(function(link) {
   link.addEventListener('click', function(event) {
     var targetId = event.target.innerText;
     var targetPosition = document.getElementById(targetId).offsetTop;
-    //console.log(targetPosition);
-    smoothScrollTo(document.body, targetPosition, 400);
+    smoothScrollTo(document.body, targetPosition, 600);
   })
 });
 
-// Smooth scroll function
 
+// Smooth scroll function
 function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) {
-  if (scrollDuration <= 0){
-    return;
-  }
-  //console.log(targetElementPosition)
-  var distanceToTarget = targetElementPosition - elementScrolled.offsetTop;
+  if (scrollDuration <= 0) { return; }
+  var distanceToTarget = targetElementPosition - elementScrolled.scrollTop;
   var scrollBlock = distanceToTarget / scrollDuration * 10;
 
   setTimeout(function(){
     elementScrolled.scrollTop = elementScrolled.scrollTop + scrollBlock;
-    if (elementScrolled.scrollTop === targetElementPosition){
-      return;
-    }
+    if (elementScrolled.scrollTop === targetElementPosition) { return; }
     smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration - 10);
-  }, scrollDuration);
-
-  //console.log(distanceToTarget);
-  // elementScrolled.scrollTop = 1000;
+  }, 10);
 }
-
-// window.addEventListener('scroll', function(){
-//   console.log(document.body.scrollTop)
-// });
-
-
-//console.log(contactDOM);
