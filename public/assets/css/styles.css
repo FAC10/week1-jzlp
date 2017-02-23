@@ -4,10 +4,24 @@
   padding: 0;
 }
 
+.nav {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav__logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+}
+
 .nav__link a {
   box-sizing: border-box;
-  padding: 10px;
+  padding: .625rem;
   text-decoration: none;
+  font-size: 1.5rem; 
 }
 
 .nav__link a:hover {
@@ -26,7 +40,7 @@ body {
 
 footer {
   background-color: purple;
-  font-size: 16px;
+  font-size: 1rem;
   height: 5vh;
   width: 100%;
 }
@@ -45,8 +59,12 @@ footer {
 
 .about__heading {
   color: white;
+  font-weight: lighter;
   background-color: rgba(34, 28, 62, 0.8);
-  margin: 10%;
+  /*margin: 10%;*/
+  margin: 0 auto;
+  margin-top: -20vh;
+  width: 80%;
   padding: 5%;
   border-radius: 5%;
   text-align: center;
@@ -81,12 +99,10 @@ footer {
 }
 
 .nav__list {
-  padding: 10px 10px 20px 10px;
   text-align: center;
 }
 
 .nav__logo {
-  padding: 20px 10px 10px 10px;
   text-align: center;
 }
 
@@ -116,9 +132,9 @@ footer {
 
 .profile__bio {
   font-size: 1em;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 5px 10px 10px 10px;
+  padding: .3rem .63rem .63rem .63rem;
 }
 
 .profile__card {
@@ -137,20 +153,20 @@ footer {
 }
 
 .profile__name {
-  font-size: 20px;
-  padding: 5px;
+  font-size: 1.25rem;
+  padding: .3rem;
   text-align: center;
 }
 
 .social__icon {
   display: inline;
-  height: 40px;
-  padding: 1px 3px 3px 1px;
-  width: 40px;
+  height: 2.5rem;
+  padding: 0.06rem 0.2rem 0.2rem 0.06rem;
+  width: 2.5rem;
 }
 
 .page-footer__text {
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -213,12 +229,12 @@ for .about__heading make text bigger*/
 
 .contact input {
   line-height: 3rem;
-  border-radius: 4px;
+  border-radius: .25rem;
 }
 
 .form__input--message {
   height: 10rem;
-  border-radius: 4px;
+  border-radius: .25rem;
   padding-top: 0.5rem;
 }
 
@@ -226,7 +242,7 @@ for .about__heading make text bigger*/
   height: 4rem;
   width: 50%;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: .25rem;
   color: #fff;
   background-color: #2280bf;
   border-style: none;
