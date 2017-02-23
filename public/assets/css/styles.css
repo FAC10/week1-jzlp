@@ -217,6 +217,10 @@ body {
   transform: scale(1.25);
 }
 
+.social__icon a img:hover, .social__icon a img:focus {
+  transform: translate(2px, 2px);
+}
+
 .social {
   display: flex;
   justify-content: center;
