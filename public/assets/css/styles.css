@@ -6,7 +6,6 @@
 
 .nav__link a {
   box-sizing: border-box;
-  color: green;
   padding: 10px;
   text-decoration: none;
 }
@@ -18,7 +17,7 @@
 }
 
 body {
-  color: black;
+  color: #292929;
 }
 
 article {
@@ -41,7 +40,7 @@ footer {
 }
 
 #team {
-  background-color: orange;
+  background-color: #8398ad;
   height: 410vh;
 }
 
@@ -67,37 +66,53 @@ footer {
 .profile {
   height: 100vh;
   margin: 0;
-  padding: 10px;
 }
 
 .profile__avatar {
-  /*height: auto;*/
   margin: 0 auto;
+  max-height: 75vh;
   width: 100%;
 }
 
 .profile__bio {
+  font-size: 1em;
+  line-height: 20px;
   text-align: center;
+  padding: 5px 10px 10px 10px;
 }
 
 .profile__card {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .profile__name {
-  font-size: 25px;
-  padding: 15px;
+  font-size: 20px;
+  padding: 5px;
   text-align: center;
 }
 
 .social__icon {
   display: inline;
+  height: 40px;
+  padding: 1px 3px 3px 1px;
+  width: 40px;
 }
 
 .page-footer__text {
   font-size: 16px;
   text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.team__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* In media query .team__header height:10vh;, .profile height:90vh;*/
