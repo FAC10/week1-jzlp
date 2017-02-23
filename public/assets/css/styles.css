@@ -36,17 +36,17 @@ footer {
   height: 10vh;
 }
 
-#about {
+.about {
   background-color: green;
 }
 
-#team {
+.team {
   background-color: orange;
   height: 410vh;
 }
 
-#contact {
-  background-color: blue;
+.contact {
+  background-color: rgb(59, 63, 69);
   height: 95vh;
 }
 
@@ -101,3 +101,66 @@ footer {
 }
 
 /* In media query .team__header height:10vh;, .profile height:90vh;*/
+
+
+
+
+
+
+/* form changes below */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #ffffff;
+  padding-top: 2rem;
+}
+
+.contact__heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 85%;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 80%;
+}
+
+.form__input--name, .form__input--email, .form__input--message {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.form__label--name, .form__label--email, .form__label--message {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.contact input {
+  line-height: 3rem;
+  border-radius: 4px;
+}
+
+.form__input--message {
+  height: 10rem;
+  border-radius: 4px;
+  padding-top: 0.5rem;
+}
+
+.form__btn {
+  height: 4rem;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #2280bf;
+  border-style: none;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
