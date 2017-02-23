@@ -20,7 +20,7 @@ body {
   color: #292929;
 }
 
-article {
+.about {
   height: 100vh;
 }
 
@@ -53,8 +53,22 @@ footer {
 }
 
 .team {
-  background-color: #8398ad;
-  height: 410vh;
+  background-color: rgba(131, 152, 173, 0.7);
+  display: flex;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
+  /*height: 410vh;*/
+}
+
+@media screen and (min-width: 400px) {
+  .team {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+
 }
 
 .contact {
@@ -79,11 +93,24 @@ footer {
 .profile {
   height: 100vh;
   margin: 0;
+  /*width: 20%;*/
+  /*flex: 1;*/
+}
+
+@media screen and (min-width: 400px) {
+  .profile {
+    /*display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: space-between;*/
+    height: auto;
+    width: 20%;
+  }
 }
 
 .profile__avatar {
   margin: 0 auto;
-  max-height: 75vh;
+  /*max-height: 75vh;*/
   width: 100%;
 }
 
@@ -97,6 +124,16 @@ footer {
 .profile__card {
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+@media screen and (min-width: 400px) {
+  .profile__card {
+    height: auto;
+  }
 }
 
 .profile__name {
@@ -126,6 +163,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.team__heading {
+  font-size: 3rem;
+  padding-top: 0.5rem;
 }
 
 /* In media query .team__header height:10vh;, .profile height:90vh;
@@ -145,6 +188,7 @@ for .about__heading make text bigger*/
 .contact__heading {
   text-align: center;
   font-size: 3rem;
+  text-transform: lowercase;
 }
 
 .form {
