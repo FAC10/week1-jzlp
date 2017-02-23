@@ -4,9 +4,26 @@
   padding: 0;
 }
 
+.nav {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav__logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+}
+
+/*.nav__list {
+  padding-top: -1rem;
+}*/
+
 .nav__link a {
   box-sizing: border-box;
-  padding: 10px;
+  padding: .625rem;
   text-decoration: none;
 }
 
@@ -45,8 +62,12 @@ footer {
 
 .about__heading {
   color: white;
+  font-weight: lighter;
   background-color: rgba(34, 28, 62, 0.8);
-  margin: 10%;
+  /*margin: 10%;*/
+  margin: 0 auto;
+  margin-top: -20vh;
+  width: 80%;
   padding: 5%;
   border-radius: 5%;
   text-align: center;
@@ -67,12 +88,12 @@ footer {
 }
 
 .nav__list {
-  padding: 10px 10px 20px 10px;
+  /*padding: 10px 10px 20px 10px;*/
   text-align: center;
 }
 
 .nav__logo {
-  padding: 20px 10px 10px 10px;
+  /*padding: 20px 10px 10px 10px;*/
   text-align: center;
 }
 
