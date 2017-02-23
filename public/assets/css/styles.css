@@ -31,19 +31,21 @@ html {
 }
 
 .nav__logo {
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .nav__link a {
   box-sizing: border-box;
+  color: #292929;
   padding: .625rem;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
-.nav__link a:hover {
-  background-color: pink;
-  color: orange;
+.nav__link a:hover, .nav__link a:focus  {
+  background-color: #292929;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -86,7 +88,6 @@ body {
   .team {
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
     padding-bottom: 1rem;
   }
 }
