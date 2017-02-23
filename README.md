@@ -1,21 +1,20 @@
 # JZLP Week one project
+[Link to our website](https://fac10.github.io/week1-jzlp/)
 ---
 
 ## Why
 
-  fill
+To showcase JZLP, a team of developers who understand, communicate and deliver.
 
 ## What
 
-  us
+A one-page portfolio site that provides an overview of JZLP, including an about us section, team member profiles and a contact page.
 
 ## How
 
-  in
-
-
 ### Process
-1. discussion day 1
+
+#### Discussion Day 1
   * set up github repo and gitter channel
   * group wireframe of web app
   * decided to go mobile first in terms of design
@@ -38,7 +37,7 @@
 
 - [x] work out host on github pages
 - [x] inital design (enhanced wireframe) assigned to Joey and Zooey
-
+- [x] Ensure site works with Chrome Vox --> accessible, tabbable and chrome vox accessibility, tabbable and nav with arrow keys
 
 ### Stretch goals
 - [x] convert profile photos to cartoon using [BeFunky Online Photo Editor](https://www.befunky.com/)
