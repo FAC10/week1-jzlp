@@ -36,8 +36,21 @@ footer {
   height: 10vh;
 }
 
-#about {
-  background-color: green;
+.about {
+  background-image: url("../../../images/bg-images/profile-background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__heading {
+  color: white;
+  background-color: rgba(34, 28, 62, 0.8);
+  margin: 10%;
+  padding: 5%;
+  border-radius: 5%;
+  text-align: center;
 }
 
 #team {
@@ -100,4 +113,5 @@ footer {
   text-align: center;
 }
 
-/* In media query .team__header height:10vh;, .profile height:90vh;*/
+/* In media query .team__header height:10vh;, .profile height:90vh;
+for .about__heading make text bigger*/
