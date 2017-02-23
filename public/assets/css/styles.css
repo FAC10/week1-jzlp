@@ -1,3 +1,103 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link a {
+  box-sizing: border-box;
+  color: green;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav__link a:hover {
+  background-color: pink;
+  color: orange;
+  text-decoration: underline;
+}
+
 body {
   color: black;
 }
+
+article {
+  height: 100vh;
+}
+
+footer {
+  background-color: purple;
+  font-size: 16px;
+  height: 5vh;
+  width: 100%;
+}
+
+.team__header {
+  height: 10vh;
+}
+
+#about {
+  background-color: green;
+}
+
+#team {
+  background-color: orange;
+  height: 410vh;
+}
+
+#contact {
+  background-color: blue;
+  height: 95vh;
+}
+
+.nav__link {
+  display: inline;
+}
+
+.nav__list {
+  padding: 10px 10px 20px 10px;
+  text-align: center;
+}
+
+.nav__logo {
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+}
+
+.profile {
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.profile__avatar {
+  /*height: auto;*/
+  margin: 0 auto;
+  width: 100%;
+}
+
+.profile__bio {
+  text-align: center;
+}
+
+.profile__card {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.profile__name {
+  font-size: 25px;
+  padding: 15px;
+  text-align: center;
+}
+
+.social__icon {
+  display: inline;
+}
+
+.page-footer__text {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* In media query .team__header height:10vh;, .profile height:90vh;*/
