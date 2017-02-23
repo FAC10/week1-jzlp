@@ -109,6 +109,8 @@ body {
 
 .team__heading {
   font-size: 3rem;
+  font-family: 'Anton', sans-serif;
+  font-weight: lighter;
   padding-top: 0.5rem;
 }
 
@@ -200,6 +202,8 @@ for .about__heading make text bigger*/
 }
 
 .contact__heading {
+  font-family: 'Anton', sans-serif;
+  font-weight: lighter;
   text-align: center;
   font-size: 3rem;
   text-transform: lowercase;
