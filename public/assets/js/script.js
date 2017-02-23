@@ -1,17 +1,14 @@
 // Modify nav anchor links to avoid href attribute
 // taking precendence over javascript smoothScrollTo function
 document.querySelector('.nav__list').innerHTML = `
-  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;">about</a></li>
-  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;">team</a></li>
-  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;">contact</a></li>
+  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;" tabindex="0">about</a></li>
+  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;" tabindex="0">team</a></li>
+  <li class="nav__link"><a class="js-nav-link" style="cursor:pointer;" tabindex="0">contact</a></li>
 `;
 
 
 // Find elements in DOM
 var linksDOM = document.querySelectorAll('.js-nav-link');
-var aboutDOM = document.getElementById('about');
-var teamDOM = document.getElementById('team');
-var contactDOM = document.getElementById('contact');
 
 
 // Add event listeners
@@ -26,7 +23,7 @@ linksDOM.forEach(function(link) {
 
 // Smooth scroll function
 function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) {
-  if (scrollDuration <= 0) { return; }
+  if (scrollDuration <= 0) { return; } // seems to be working without this
   var distanceToTarget = targetElementPosition - elementScrolled.scrollTop;
   var scrollBlock = distanceToTarget / scrollDuration * 10;
 
