@@ -14,10 +14,10 @@
   in
 
 
-### process
+### Process
 1. discussion day 1
   * set up github repo and gitter channel
-  * group wireframe of webapp
+  * group wireframe of web app
   * decided to go mobile first in terms of design
   * ran through user stories to check that our plan fitted these
     * decided to use formspree.io for form
@@ -28,24 +28,42 @@
       * make sure all is tabbable
     * do we need any javascript?
       * hopefully not
-  * Day one target: have a basic webapp with placeholders by the end of today
+  * Day one target: have a basic web app with placeholders by the end of today
 
 
+### Tasks
+- [x] html structure assigned to Piotr and Lucy
 
+  <img src="demo/pure-html-render.png" width="400" height="auto"/>
 
-
-### tasks
-* html structure assigned to Piotr and Lucy
-* work out host on github pages :heavy_check_mark:
-* inital design (enhanced wirefram) assigned to Joey and Zooey
-
+- [x] work out host on github pages
+- [x] inital design (enhanced wireframe) assigned to Joey and Zooey
 
 
 ### Stretch goals
-* ~~expand "team" member sections on hover~~
-* smooth scroll (pref css only, with js if needed)
-* improve security of form submission
-* make each section fill screen :heavy_check_mark:
+- [x] convert profile photos to cartoon using [BeFunky Online Photo Editor](https://www.befunky.com/)
+- [x] optimise rendering of images
+  1. Reduced file size of profile images (11MB -> 70K) by resizing and optimising.
+  1. Saved JPEGs as **progressive images rather than baseline images**. Baseline images are the "normal" JPEGs, the type of JPEG that all image programs write by default. The browsers load them top-to-bottom as more of the image information is being downloaded. Progressive JPEGs are another type of JPEGs, they are rendered progressively. First you see a low quality version of the whole image. Then, as more of the image information arrives over the network, the quality gradually improves.
+
+  <img src="demo/baseline_vs_progressive_image.jpg" width="560" height="auto"/>
+
+  Resources:
+   - [GIMP - How to save in progressive / baseline mode - Youtube](https://www.youtube.com/watch?v=SadyOSO3D8w)
+   - [Photoshop - How to save in progressive / baseline mode](http://peteschuster.com/2013/01/saving-jpegs-for-the-web-setting-photoshop-up-for-progressive-jpegs/)
+   - [Progressive vs Baseling - Demo Image - Youtube](https://www.youtube.com/watch?v=TOc15-2apY0)
+   - [Progressive vs Baseling - Demo Page - Youtube](https://www.youtube.com/watch?v=oItMsmZ995I)
+   - [Book of Speed - Chapter 5 Optimizing Images - Stoyan Stefanov](http://www.bookofspeed.com/chapter5.html)
+   - [Progressive jpegs: a new best practice](https://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
+   - [The return of the progressive JPEG](https://www.wired.com/2013/01/the-return-of-the-progressive-jpeg/)
+
+- [ ] ~~expand "team" member sections on hover~~
+
+  <img src="demo/expand-on-hover.gif" width="560" height="auto"/>
+
+- [ ] smooth jump to section (can it be done with css? go with js if needed)
+- [ ] improve security of form submission
+- [x] make each section fill screen
 
 ### User stories
 ### Build a one-page portfolio website for you and your team
