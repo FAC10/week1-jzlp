@@ -1,11 +1,12 @@
 # JZLP Week one project
+(Click here!)[https://fac10.github.io/week1-jzlp/]
 ---
 
-## Why
+## Why (describing the purpose)
 
   fill
 
-## What
+## What (describing the site)
 
   us
 
