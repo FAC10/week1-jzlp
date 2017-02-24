@@ -40,7 +40,7 @@ A one-page portfolio site that provides an overview of JZLP, including an about 
 - [x] Ensure site works with Chrome Vox --> accessible, tabbable and chrome vox accessibility, tabbable and nav with arrow keys
 
 ### Stretch goals
-- [x] convert profile photos to cartoon using [BeFunky Online Photo Editor](https://www.befunky.com/)
+- [x] convert profile photos to painting [BeFunky Online Photo Editor](https://www.befunky.com/)
 - [x] optimise rendering of images
   1. Reduced file size of profile images (11MB -> 70K) by resizing and optimising.
   1. Saved JPEGs as **progressive images rather than baseline images**. Baseline images are the "normal" JPEGs, the type of JPEG that all image programs write by default. The browsers load them top-to-bottom as more of the image information is being downloaded. Progressive JPEGs are another type of JPEGs, they are rendered progressively. First you see a low quality version of the whole image. Then, as more of the image information arrives over the network, the quality gradually improves.
@@ -50,7 +50,7 @@ A one-page portfolio site that provides an overview of JZLP, including an about 
   Resources:
    - [GIMP - How to save in progressive / baseline mode - Youtube](https://www.youtube.com/watch?v=SadyOSO3D8w)
    - [Photoshop - How to save in progressive / baseline mode](http://peteschuster.com/2013/01/saving-jpegs-for-the-web-setting-photoshop-up-for-progressive-jpegs/)
-   - [Progressive vs Baseling - Demo Image - Youtube](https://www.youtube.com/watch?v=TOc15-2apY0)
+   - [Progressive vs Baseline - Demo Image - Youtube](https://www.youtube.com/watch?v=TOc15-2apY0)
    - [Progressive vs Baseling - Demo Page - Youtube](https://www.youtube.com/watch?v=oItMsmZ995I)
    - [Book of Speed - Chapter 5 Optimizing Images - Stoyan Stefanov](http://www.bookofspeed.com/chapter5.html)
    - [Progressive jpegs: a new best practice](https://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
@@ -60,7 +60,45 @@ A one-page portfolio site that provides an overview of JZLP, including an about 
 
   <img src="demo/expand-on-hover.gif" width="560" height="auto"/>
 
-- [ ] smooth jump to section (can it be done with css? go with js if needed)
+- [x] smooth scroll to section (can it be done with css? go with js if needed)
+
+
+```javascript
+// Find elements in DOM
+var linksDOM = document.querySelectorAll('.js-nav-link');
+
+
+// Smooth scroll settings
+var scrollDuration = 600;
+var numberOfScrolls = 60;
+var singleScrollDuration = scrollDuration / numberOfScrolls;
+
+
+// Smooth scroll function
+function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) {
+  if (scrollDuration <= 0) { return; }
+  var distanceToTarget = targetElementPosition - elementScrolled.scrollTop;
+  var scrollBlock = distanceToTarget / scrollDuration * singleScrollDuration;
+
+  setTimeout(function(){
+    elementScrolled.scrollTop = elementScrolled.scrollTop + scrollBlock;
+    if (elementScrolled.scrollTop === targetElementPosition) { return; }
+    smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration - singleScrollDuration);
+  }, 10);
+}
+
+
+// Add event listeners
+linksDOM.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    var targetId = event.target.innerText;
+    var targetPosition = document.getElementById(targetId).offsetTop;
+    smoothScrollTo(document.body, targetPosition, scrollDuration);
+  });
+});
+```
+
 - [ ] improve security of form submission
 - [x] make each section fill screen
 

@@ -94,7 +94,7 @@ body {
   flex-direction: column;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 48em) {
   .team {
     flex-direction: row;
     flex-wrap: wrap;
@@ -111,7 +111,7 @@ body {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 48em) {
   .team__header {
     margin-top: 0;
     margin-bottom: 0;
@@ -129,7 +129,7 @@ body {
   margin: 0;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 48em) {
   .profile {
     height: auto;
     width: 25%;
@@ -146,7 +146,7 @@ body {
   height: 100vh;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 48em) {
   .profile__card {
     justify-content: space-between;
     height: 100%;
@@ -166,7 +166,7 @@ body {
   padding: .3rem .63rem .63rem .63rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 48em) {
   .profile__bio {
     font-size: 1.4em;
   }
@@ -178,7 +178,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 48em) {
   .profile__name {
     font-size: 2em;
   }
@@ -225,9 +225,6 @@ body {
 /* In media query .team__header height:10vh;, .profile height:90vh;
 for .about__heading make text bigger*/
 
-
-/* form changes below */
-
 .contact {
   display: flex;
   flex-direction: column;
@@ -235,7 +232,7 @@ for .about__heading make text bigger*/
   color: #ffffff;
   padding-top: 2rem;
   background-color: rgb(59, 63, 69);
-  height: 95vh;
+  height: 94vh;
 }
 
 .contact__heading {
@@ -256,14 +253,36 @@ for .about__heading make text bigger*/
   height: 80%;
 }
 
-.form__input--name, .form__input--email, .form__input--message {
-  font-size: 1.6rem;
-  padding-left: 1rem;
-}
-
 .form__label--name, .form__label--email, .form__label--message {
   font-size: 1.6rem;
-  padding-left: 1rem;
+  padding-left: 1.2rem;
+}
+
+.form__input--name, .form__input--email, .form__input--message {
+  font-size: 1.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border: transparent;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
+
+@media screen and (min-width: 48em) {
+  .form__input--name, .form__input--email, .form__input--message {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.form__input--name:focus, .form__input--email:focus, .form__input--message:focus {
+  box-shadow: 0 0 0.7rem 0.7rem rgba(34, 128, 191, 0.7);
+  border-color: rgba(34, 128, 191);
+}
+
+@media screen and (min-width: 48em) {
+  .form__input--name:focus, .form__input--email:focus, .form__input--message:focus {
+    box-shadow: 0 0 1rem 1rem rgba(34, 128, 191, 0.7);
+  }
 }
 
 .contact input {
@@ -272,9 +291,16 @@ for .about__heading make text bigger*/
 }
 
 .form__input--message {
-  height: 10rem;
+  height: 8rem;
   border-radius: .25rem;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+  resize: none;
+}
+
+@media screen and (min-width: 48em) {
+  .form__input--message {
+    height: 15rem;
+  }
 }
 
 .form__btn {
@@ -287,6 +313,20 @@ for .about__heading make text bigger*/
   border-style: none;
   font-size: 2rem;
   margin-top: 2rem;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.form__btn:focus {
+  box-shadow: 0 0 0.7rem 0.7rem rgba(34, 128, 191, 0.5);
+  border: transparent;
+  outline: none;
+}
+
+@media screen and (min-width: 48em) {
+  .form__btn:focus  {
+    box-shadow: 0 0 1rem 1rem rgba(34, 128, 191, 0.5);
+  }
 }
 
 footer {
@@ -296,11 +336,41 @@ footer {
   align-items: center;
   background-color: rgba(27, 27, 31, 0.9);
   color: #ccc;
-  height: 5vh;
+  height: 6vh;
   width: 100%;
 }
 
 .page-footer__text {
   font-size: 1.3rem;
   text-align: center;
+}
+
+.back-to-top-btn {
+  position: fixed;
+	display: block;
+  opacity: 0.6;
+	width: 50px;
+	height: 50px;
+	text-indent: -9999px;
+	z-index: 999;
+	right: 5px;
+	bottom: 5px;
+  background-color: #bfbfbf;
+  background-image: url('/images/graphics/up-arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+	border-radius: 30px;
+  transition: opacity 1s ease, background 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+	background-color: #707070;
+}
+
+@media screen and (min-width: 48em) {
+  .back-to-top-btn  {
+    right: 20px;
+    bottom: 8px;
+  }
 }
