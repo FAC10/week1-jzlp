@@ -2,6 +2,29 @@
 [Link to our website](https://fac10.github.io/week1-jzlp/)
 ---
 
+##Intro - Zooey
+show README
+why, what, how
+How did you split up the work?
+How did you choose to pair?
+
+##Show your use of Github - Joey
+commit history
+PR history
+
+##Walk through the UX - Lucy
+i.e. demo your website
+
+##Walk through the code
+###HTML structure - Lucy
+###Flexbox - Joey
+###Responsiveness - Joey
+###Acccessibility - Zooey
+###Images and form - Piotr
+###Scroll feature - Piotr
+###Javascript problem - Lucy
+
+
 ## Why
 
 To showcase JZLP, a team of developers who understand, communicate and deliver.
