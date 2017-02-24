@@ -160,7 +160,7 @@ body {
 }
 
 .profile__bio {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 1.75rem;
   text-align: center;
   padding: .3rem .63rem .63rem .63rem;
@@ -168,7 +168,7 @@ body {
 
 @media screen and (min-width: 48em) {
   .profile__bio {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
 }
 
@@ -180,7 +180,7 @@ body {
 
 @media screen and (min-width: 48em) {
   .profile__name {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
