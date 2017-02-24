@@ -116,16 +116,17 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 0.7rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 48em) {
+/*Doesn't seem necessary anymore, but left in just in case*/
+/*@media screen and (min-width: 48em) {
   .team__header {
     margin-top: 0;
     margin-bottom: 0;
   }
-}
+}*/
 
 .team__heading {
   font-size: 3rem;
