@@ -55,7 +55,7 @@ body {
 }
 
 .about {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .about {
@@ -232,7 +232,7 @@ for .about__heading make text bigger*/
   color: #ffffff;
   padding-top: 2rem;
   background-color: rgb(59, 63, 69);
-  height: 94vh;
+  min-height: 94vh;
 }
 
 .contact__heading {
@@ -336,7 +336,7 @@ footer {
   align-items: center;
   background-color: rgba(27, 27, 31, 0.9);
   color: #ccc;
-  height: 6vh;
+  min-height: 6vh;
   width: 100%;
 }
 
