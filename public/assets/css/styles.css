@@ -241,7 +241,7 @@ for .about__heading make text bigger*/
   color: #ffffff;
   padding-top: 2rem;
   background-color: rgb(59, 63, 69);
-  min-height: 94vh;
+  height: 94vh;
 }
 
 .contact__heading {
