@@ -367,7 +367,7 @@ footer {
 	right: 5px;
 	bottom: 5px;
   background-color: #bfbfbf;
-  background-image: url('/images/graphics/up-arrow.png');
+  background-image: url('../../../images/graphics/up-arrow.png');
   background-repeat: no-repeat;
   background-position: center;
 	border-radius: 30px;
