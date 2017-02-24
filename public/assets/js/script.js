@@ -11,14 +11,33 @@ var singleScrollDuration = scrollDuration / numberOfScrolls;
 // Smooth scroll function
 function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) {
   if (scrollDuration <= 0) { return; }
-  var distanceToTarget = targetElementPosition - elementScrolled.scrollTop;
+  var distanceToTarget = targetElementPosition - getScrollPosition(elementScrolled);
   var scrollBlock = distanceToTarget / scrollDuration * singleScrollDuration;
 
-  setTimeout(function(){
-    elementScrolled.scrollTop = elementScrolled.scrollTop + scrollBlock;
-    if (elementScrolled.scrollTop === targetElementPosition) { return; }
+  setTimeout(function() {
+    console.log();elementScrolled.scrollTop
+    elementScrolled.scrollTop = getScrollPosition(elementScrolled) + 10;
+    // var currentScrollPosition = getScrollPosition(elementScrolled) + scrollBlock;
+    // console.log(currentScrollPosition);
+
+    if (currentScrollPosition === targetElementPosition) { return; }
     smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration - singleScrollDuration);
   }, 10);
+}
+
+
+
+function getScrollPosition(element) {
+  return element.scrollTop ||
+         window.pageYOffset ||
+         document.documentElement.scrollTop ||
+         document.body.scrollTop ||
+         0;
+}
+
+
+function setScrollPosition(element) {
+  element
 }
 
 
@@ -41,8 +60,10 @@ var amountScrolledThreshold = 1000;
 var backToTopButton = document.querySelector('.back-to-top-btn');
 
 
+
 // Show or hide 'back to top' button
 window.addEventListener('scroll', function(event) {
+
   if (window.scrollY > amountScrolledThreshold) {
     backToTopButton.style.opacity = '0.6';
   } else {
