@@ -83,7 +83,7 @@ A one-page portfolio site that provides an overview of JZLP, including an about 
 
   <img src="demo/expand-on-hover.gif" width="560" height="auto"/>
 
-- [x] smooth scroll to section (can it be done with css? go with js if needed)
+- [x] Scroll to section (can it be done with css? go with js if needed)
 
 
 ```javascript
@@ -91,23 +91,37 @@ A one-page portfolio site that provides an overview of JZLP, including an about 
 var linksDOM = document.querySelectorAll('.js-nav-link');
 
 
-// Smooth scroll settings
-var scrollDuration = 600;
+// Scroll to target function
+var totalScrollDuration = 600;
 var numberOfScrolls = 60;
-var singleScrollDuration = scrollDuration / numberOfScrolls;
+var singleScrollDuration = totalScrollDuration / numberOfScrolls;
 
-
-// Smooth scroll function
-function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) {
+function scrollTo(targetElementPosition, scrollDuration) {
   if (scrollDuration <= 0) { return; }
-  var distanceToTarget = targetElementPosition - elementScrolled.scrollTop;
-  var scrollBlock = distanceToTarget / scrollDuration * singleScrollDuration;
+  var distanceToTarget = targetElementPosition - getScrollPosition();
+  var singleScrollDistance = distanceToTarget / scrollDuration * singleScrollDuration;
 
-  setTimeout(function(){
-    elementScrolled.scrollTop = elementScrolled.scrollTop + scrollBlock;
-    if (elementScrolled.scrollTop === targetElementPosition) { return; }
-    smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration - singleScrollDuration);
-  }, 10);
+  setTimeout(function() {
+    var scrolledElement = document.body; // chrome safari
+    var positionBeforeScroll = getScrollPosition();
+    scrolledElement.scrollTop = positionBeforeScroll + singleScrollDistance;
+
+    if (document.documentElement.scrollTop === positionBeforeScroll) {
+      scrolledElement = document.documentElement; // firefox
+      scrolledElement.scrollTop = getScrollPosition() + singleScrollDistance;
+    }
+
+    if (scrolledElement.scrollTop === targetElementPosition) { return; }
+    scrollTo(targetElementPosition, scrollDuration - singleScrollDuration);
+  }, singleScrollDuration);
+}
+
+
+function getScrollPosition() {
+  return document.body.scrollTop ||
+         document.documentElement.scrollTop ||
+         window.pageYOffset ||
+         0;
 }
 
 
@@ -115,9 +129,9 @@ function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) 
 linksDOM.forEach(function(link) {
   link.addEventListener('click', function(event) {
     event.preventDefault();
-    var targetId = event.target.innerText;
+    var targetId = event.target.innerText; // assumes that inner text will be the same as target id
     var targetPosition = document.getElementById(targetId).offsetTop;
-    smoothScrollTo(document.body, targetPosition, scrollDuration);
+    scrollTo(targetPosition, totalScrollDuration);
   });
 });
 ```
