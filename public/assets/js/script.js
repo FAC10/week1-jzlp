@@ -2,43 +2,48 @@
 var linksDOM = document.querySelectorAll('.js-nav-link');
 
 
-// Smooth scroll settings
-var scrollDuration = 600;
-var numberOfScrolls = 60;
-var singleScrollDuration = scrollDuration / numberOfScrolls;
+// Scroll to target function
+function scrollTo(target) {
 
+  var totalScrollDuration = 600;
+  var numberOfScrolls = 60;
+  var singleScrollDuration = totalScrollDuration / numberOfScrolls;
 
-// Smooth scroll function
-function smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration) {
-  if (scrollDuration <= 0) { return; }
-  var distanceToTarget = targetElementPosition - getScrollPosition(elementScrolled);
-  var scrollBlock = distanceToTarget / scrollDuration * singleScrollDuration;
+  var distanceToTarget = target - getScrollPosition();
+  var singleScrollDistance = distanceToTarget / numberOfScrolls;
 
-  setTimeout(function() {
-    console.log();elementScrolled.scrollTop
-    elementScrolled.scrollTop = getScrollPosition(elementScrolled) + 10;
-    // var currentScrollPosition = getScrollPosition(elementScrolled) + scrollBlock;
-    // console.log(currentScrollPosition);
+  // failsafe counter
+  var scrollCounter = 0;
 
-    if (currentScrollPosition === targetElementPosition) { return; }
-    smoothScrollTo(elementScrolled, targetElementPosition, scrollDuration - singleScrollDuration);
-  }, 10);
+  var singleScrollAction = setInterval(function() {
+    window.scroll(0, getScrollPosition() + singleScrollDistance);
+    if (distanceToTarget > 0) { // scrolling down
+      if (getScrollPosition() >= target) {
+        clearInterval(singleScrollAction);
+      }
+    } else {
+      if (getScrollPosition() <= target) { // scrolling up
+        clearInterval(singleScrollAction);
+      }
+    }
+
+    // clear interval if something goes wrong
+    scrollCounter++;
+    if (scrollCounter > numberOfScrolls * 2) { // any number > number of scrolls
+      console.log('failsafe');
+      clearInterval(singleScrollAction);
+    }
+  }, singleScrollDuration);
 }
 
 
-
-function getScrollPosition(element) {
-  return element.scrollTop ||
-         window.pageYOffset ||
+function getScrollPosition() {
+  return document.body.scrollTop ||
          document.documentElement.scrollTop ||
-         document.body.scrollTop ||
+         window.pageYOffset ||
          0;
 }
 
-
-function setScrollPosition(element) {
-  element
-}
 
 
 // Add event listeners
@@ -47,11 +52,9 @@ linksDOM.forEach(function(link) {
     event.preventDefault();
     var targetId = event.target.innerText;
     var targetPosition = document.getElementById(targetId).offsetTop;
-    smoothScrollTo(document.body, targetPosition, scrollDuration);
+    scrollTo(targetPosition);
   });
 });
-
-
 
 
 
@@ -75,5 +78,62 @@ window.addEventListener('scroll', function(event) {
 // Scroll to target
 backToTopButton.addEventListener('click', function(event) {
   event.preventDefault();
-  smoothScrollTo(document.body, 0, scrollDuration);
+  scrollTo(0);
+});
+
+
+
+
+
+
+
+
+
+// Scroll function
+// function scrollTo(elementScrolled, targetElementPosition, scrollDuration) {
+//   if (scrollDuration <= 0) { return; }
+//   var distanceToTarget = targetElementPosition - getScrollPosition(elementScrolled);
+//   var scrollBlock = distanceToTarget / scrollDuration * singleScrollDuration;
+//
+//   setTimeout(function() {
+//     elementScrolled.scrollTop = getScrollPosition(elementScrolled) + scrollBlock;
+//     // var currentScrollPosition = getScrollPosition(elementScrolled) + scrollBlock;
+//     // console.log(currentScrollPosition);
+//
+//     if (elementScrolled.scrollTop === targetElementPosition) { return; }
+//     scrollTo(elementScrolled, targetElementPosition, scrollDuration - singleScrollDuration);
+//   }, 10);
+// }
+
+
+// function getScrollPosition(element) {
+//   return element.scrollTop ||
+//          document.documentElement.scrollTop ||
+//          window.pageYOffset ||
+//          document.body.scrollTop ||
+//          0;
+// }
+
+
+
+// test firefox
+var aboutHeaderDOM = document.querySelector('.about__header');
+
+aboutHeaderDOM.addEventListener('click', (e) => {
+  console.log('clicked');
+
+  scrollTest(document.getElementById('contact').offsetTop);
+
+  // console.log(window.pageYOffset);
+  // console.dir(document.documentElement);
+  // console.log(document.body.scrollTop);
+  // console.log(window.pageYOffset);
+
+  // window.scroll(0, 600);
+
+  // console.log('document.documentElement.scrollTop', document.documentElement.scrollTop);
+  // console.log('document.body.scrollTop', document.body.scrollTop);
+
+  // document.documentElement.scrollTop = 600; // not chrome / safari
+  // document.body.scrollTop  = 600; // not ff
 });
