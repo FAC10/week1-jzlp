@@ -14,12 +14,12 @@ function scrollTo(targetElementPosition, scrollDuration) {
   var singleScrollDistance = distanceToTarget / scrollDuration * singleScrollDuration;
 
   setTimeout(function() {
-    var scrolledElement = document.body;
+    var scrolledElement = document.body; // chrome safari
     var positionBeforeScroll = getScrollPosition();
-    scrolledElement.scrollTop = positionBeforeScroll + singleScrollDistance; // chrome safar
+    scrolledElement.scrollTop = positionBeforeScroll + singleScrollDistance;
 
-    if (document.documentElement.scrollTop === positionBeforeScroll) { // firefox
-      scrolledElement = document.documentElement;
+    if (document.documentElement.scrollTop === positionBeforeScroll) {
+      scrolledElement = document.documentElement; // firefox
       scrolledElement.scrollTop = getScrollPosition() + singleScrollDistance;
     }
 
